@@ -1,2 +1,17 @@
+<div class="container">
+    <h1 class="center">Liste des films</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
 
-<p>movies works!</p>
+        <div *ngFor="let movie of movies">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ movie.image }}" class="card-img-top" alt="{{ movie.image }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text">{{ movie.year }}</p>
+                    <p class="card-text">{{ movie.type }}</p>
+                    <a href="#" class="btn btn-primary">Ajouter à votre liste</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
