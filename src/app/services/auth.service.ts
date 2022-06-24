@@ -7,7 +7,7 @@ import { User } from '../interfaces/user';
 })
 export class AuthService {
   private url: string = "http://localhost:8000/authentication_token";
-  private urlUser: string = "http://localhost:8000/users";
+  private urlUser: string = "http://localhost:8000/api/users";
 
   constructor(private http: HttpClient) { }
 

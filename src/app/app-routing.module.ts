@@ -4,12 +4,14 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './components/register/register.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 const routes: Routes = [
   
   { path: 'register', component: RegisterComponent },
   { path: 'auth', component: AuthComponent },
   { path: 'movies', component: MoviesComponent, canActivate: [AuthGuard] },
+  { path: 'favorite', component: FavoriteComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

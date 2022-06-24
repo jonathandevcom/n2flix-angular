@@ -19,7 +19,7 @@ export class RegisterComponent {
 
   register() {
       this.auth.addUser(this.user).subscribe({
-        next: (res) => {
+        next: (res) => { 
             this.user = {};
             this.router.navigateByUrl('/auth');
         },

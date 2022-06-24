@@ -10,6 +10,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './services/auth.interceptor';
 import { RegisterComponent } from './components/register/register.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegisterComponent } from './components/register/register.component';
     HomeComponent,
     MoviesComponent,
     AuthComponent,
-    RegisterComponent
+    RegisterComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

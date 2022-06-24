@@ -1,7 +1,12 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="movies">Movies</a>
-        <a class="navbar-brand" href="favorite">Favorite</a>
-        <a class="navbar-brand" href="logout">Log out</a>
+        <a class="navbar-brand" routerLink="movies">Film</a>
+        <a class="navbar-brand" routerLink="favorite">Vos films</a>
+
+      <!-- <a *ngIf="token" class="navbar-brand" routerLink="auth">Connection</a>
+        <a *ngIf="token" class="navbar-brand" routerLink="button" (click)="deconnection()">Déconnection</a>
+--> 
+        <a class="navbar-brand" routerLink="auth">Connection</a>
+        <a class="navbar-brand" routerLink="button" (click)="deconnection()">Déconnection</a>
       </div>
 </nav>
