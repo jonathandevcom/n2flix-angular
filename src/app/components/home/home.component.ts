@@ -7,17 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  token: string | null = "";
+  token: string | null = localStorage.getItem('token');
   
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    const token = localStorage.getItem('token');
-  }
+     }
 
   deconnection() {
     localStorage.removeItem('token');
     this.router.navigateByUrl('/auth');
+    this.token = null;
   }
 
 }

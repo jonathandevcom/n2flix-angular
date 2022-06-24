@@ -3,10 +3,8 @@
         <a class="navbar-brand" routerLink="movies">Film</a>
         <a class="navbar-brand" routerLink="favorite">Vos films</a>
 
-      <!-- <a *ngIf="token" class="navbar-brand" routerLink="auth">Connection</a>
-        <a *ngIf="token" class="navbar-brand" routerLink="button" (click)="deconnection()">Déconnection</a>
---> 
-        <a class="navbar-brand" routerLink="auth">Connection</a>
-        <a class="navbar-brand" routerLink="button" (click)="deconnection()">Déconnection</a>
+       <a *ngIf="!token" class="navbar-brand" routerLink="auth">Connection</a>
+      <a *ngIf="token" class="navbar-brand" routerLink="button" (click)="deconnection()">Déconnection</a>
+
       </div>
 </nav>
