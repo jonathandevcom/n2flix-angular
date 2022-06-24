@@ -7,9 +7,15 @@ import { User } from '../interfaces/user';
 })
 export class AuthService {
   private url: string = "http://localhost:8000/authentication_token";
+  private urlUser: string = "http://localhost:8000/users";
+
   constructor(private http: HttpClient) { }
 
   login(user: User) {
     return this.http.post<{ token: string }>(this.url, user);
+  }
+
+  addUser(user: User) {
+    return this.http.post<User>(this.urlUser, user);
   }
 }
